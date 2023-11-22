@@ -2,6 +2,7 @@ package com.khantnyar.mvvm_login.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import com.khantnyar.mvvm_login.R
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -66,6 +67,7 @@ object SessionManager {
     }
 
     fun getString(context: Context, key: String): String? {
+        Log.d(key, "getString: ")
         val prefs: SharedPreferences =
             context.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE)
         return prefs.getString(this.USER_TOKEN, null)

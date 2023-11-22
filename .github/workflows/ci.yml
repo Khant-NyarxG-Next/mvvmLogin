@@ -57,8 +57,8 @@ jobs:
             asset_content_type: application/zip
       - name: Execute tasks and move HTML report
         run: |
-            ./gradlew testDebugUnitTest
-            mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
+          ./gradlew testDebugUnitTest
+          mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
         shell: bash
 
       - name: Publish to GitHub Pages
