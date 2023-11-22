@@ -56,10 +56,10 @@ jobs:
             asset_name: ${{ github.event.repository.name }}.apk
             asset_content_type: application/zip
       #            bash ./gradlew :app:testDebugUnitTest --tests '*'
-      - name: Execute tasks and move HTML report
-        run: |
-            mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
-        shell: bash
+#      - name: Execute tasks and move HTML report
+#        run: |
+#            mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
+#        shell: bash
 
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
