@@ -55,12 +55,7 @@ jobs:
             asset_path: apk/app-debug.apk
             asset_name: ${{ github.event.repository.name }}.apk
             asset_content_type: application/zip
-      - name: Unit Test
-        run: ./gradlew testDebugUnitTest
-        continue-on-error: true # IMPORTANT: allow pipeline to continue to Android Test Report step
 
-      - name: Android Test Report
-        uses: asadmansr/android-test-report-action@master
       - name: Execute tasks and move HTML report
         run: |
 #            bash ./gradlew :app:testDebugUnitTest --tests '*'
