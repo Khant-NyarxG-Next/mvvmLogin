@@ -61,9 +61,8 @@ jobs:
             mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
         shell: bash
 
-#      - name: Publish to GitHub Pages
-#        uses: actions/gh-pages@v3
-#        with:
-#            build_dir: .   # Specify the directory containing your HTML report and other assets
-#            publish_dir: ./  # Specify the root directory for GitHub Pages
-#            token: ${{ secrets.PA_TOKEN }}
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
