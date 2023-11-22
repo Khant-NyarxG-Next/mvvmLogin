@@ -56,10 +56,10 @@ jobs:
             asset_name: ${{ github.event.repository.name }}.apk
             asset_content_type: application/zip
       - name: Execute tasks and move HTML report
-            run: |
-                bash ./gradlew :app:testDebugUnitTest --tests '*'
-                mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
-            shell: bash
+        run: |
+            bash ./gradlew :app:testDebugUnitTest --tests '*'
+            mv app/build/reports/tests/testDebugUnitTest/index.html ./index.html
+        shell: bash
 
       - name: Publish to GitHub Pages
         uses: actions/gh-pages@v3
